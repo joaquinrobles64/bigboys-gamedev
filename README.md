@@ -1,4 +1,4 @@
 # bigboys-gamedev
 TEAM 7: BIGBOYS<br>
-COYBOW WHIPLOOP<br>
+COYBOW WHIPLASH<br>
 3D Game Development Project :)
