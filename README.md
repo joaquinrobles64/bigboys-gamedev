@@ -1,2 +1,4 @@
 # bigboys-gamedev
-3D Game Development Project
+TEAM BIGBOYS
+COYBOW WHIPLOOP
+3D Game Development Project :)
