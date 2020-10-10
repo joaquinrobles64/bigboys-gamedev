@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3851148e-16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -257,19 +257,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.012530098
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.68342364
+      value: 0.7065076
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.012013517
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.730022
+      value: -0.70749253
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_RootOrder
@@ -277,15 +277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 1.9890001
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 273.776
+      value: 270.07898
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.040000003
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalScale.x
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd9a814b10635847a04eb8ed52d4b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2094343494}
+  player: {fileID: 1817876419}
 --- !u!4 &95655368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400326, guid: ba428b33effb2e14f990f4d529b49611,
@@ -1188,7 +1188,6 @@ GameObject:
   - component: {fileID: 309969112}
   - component: {fileID: 309969111}
   - component: {fileID: 309969110}
-  - component: {fileID: 309969109}
   m_Layer: 0
   m_Name: BossDoorWall B
   m_TagString: Untagged
@@ -1196,19 +1195,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &309969109
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309969108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &309969110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2070,8 +2056,8 @@ GameObject:
   - component: {fileID: 746862362}
   - component: {fileID: 746862361}
   - component: {fileID: 746862360}
-  - component: {fileID: 746862359}
   - component: {fileID: 746862363}
+  - component: {fileID: 746862359}
   m_Layer: 0
   m_Name: Level Floor Plane
   m_TagString: Untagged
@@ -3815,6 +3801,47 @@ MonoBehaviour:
   - {fileID: 508386330}
   - {fileID: 401033100}
   - {fileID: 1134549115}
+--- !u!114 &1817876425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817876419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e772e1bbb1e114dad3f320b6128b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1817876426
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817876419}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1817876427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817876419}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25697204, y: 0.3559309, z: 0.21579038}
+  m_Center: {x: -0.003485966, y: 0.17895289, z: 0.0033293965}
 --- !u!4 &1820622168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400080, guid: ba428b33effb2e14f990f4d529b49611,
@@ -4420,7 +4447,6 @@ GameObject:
   - component: {fileID: 2094343497}
   - component: {fileID: 2094343496}
   - component: {fileID: 2094343495}
-  - component: {fileID: 2094343500}
   - component: {fileID: 2094343499}
   m_Layer: 0
   m_Name: Player
@@ -4515,22 +4541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e80cb96be79af49a3acaa75fb3e612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &2094343500
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094343494}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!4 &2120905321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: ba428b33effb2e14f990f4d529b49611,

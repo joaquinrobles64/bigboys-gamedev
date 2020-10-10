@@ -14,17 +14,36 @@ public class ChangeAnimationCowboy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("Attack");
         }
 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.W)){
             anim.SetTrigger("Run");   
+        }
+
+        if (Input.GetKeyDown(KeyCode.A)){
+            anim.SetTrigger("Run");   
+        }
+
+        if (Input.GetKeyDown(KeyCode.S)){
+            anim.SetTrigger("Run");   
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)){
+            anim.SetTrigger("Run");   
+        }
 
         if (Input.GetKeyDown(KeyCode.I))
         {
             anim.SetTrigger("Idle");
         }
+
+        // if(Input.GetKeyDown() == null) {
+        //     anim.SetTrigger("Idle");
+        // }
+
+
     }
 }
