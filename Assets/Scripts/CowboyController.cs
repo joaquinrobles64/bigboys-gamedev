@@ -28,9 +28,9 @@ public class CowboyController : MonoBehaviour
     void Movement()
     {
 
-        float xAxis = Input.GetAxis("Horizontal");
-        float zAxis = Input.GetAxis("Vertical");
-        transform.Translate(xAxis * speed * Time.deltaTime, 0f, zAxis * speed * Time.deltaTime);
+        float xAxis = Input.GetAxis("Vertical");
+        float zAxis = Input.GetAxis("Horizontal");
+        transform.Translate(xAxis * speed * Time.deltaTime, 0f, -zAxis * speed * Time.deltaTime);
     }
 
     void Attack()
