@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 80676897a1aac69448c7b45a16b148fb
+=======
+guid: 787eb422a5b1f3e48b45d68138be1221
+>>>>>>> nc_TestBranch2
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

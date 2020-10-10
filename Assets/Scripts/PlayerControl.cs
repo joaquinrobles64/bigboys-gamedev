@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -9,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10f;
+        speed = 7f;
     }
 
     // Update is called once per frame
@@ -21,7 +22,6 @@ public class PlayerControl : MonoBehaviour
         {
             Attack();
         }
-
     }
 
     void Movement()
@@ -33,6 +33,6 @@ public class PlayerControl : MonoBehaviour
 
     void Attack()
     {
-        Instantiate()
+        
     }
 }

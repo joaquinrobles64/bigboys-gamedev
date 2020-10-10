@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7d578ffc2f685a9438ba981f9a97ecee
+=======
+guid: 95e80cb96be79af49a3acaa75fb3e612
+>>>>>>> nc_TestBranch2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
