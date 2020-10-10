@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Rotator.cs.meta
+guid: f71904ddfbbfbf94394b7ad5dca57382
+=======
+guid: ba2fa0a91b9d03846a528b36c38a5874
+>>>>>>> 52e8708b8a1c6a88735cd143273a0bac7ac2f90f:Assets/Scripts/PlayerMovement.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
