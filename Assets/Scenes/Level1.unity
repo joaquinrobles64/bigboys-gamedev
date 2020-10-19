@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.26
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.777203
+      value: 6.7772055
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalScale.y
@@ -301,7 +301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400354, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.777203
+      value: 6.7772055
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: ba428b33effb2e14f990f4d529b49611, type: 3}
       propertyPath: m_Controller
@@ -1510,6 +1510,7 @@ GameObject:
   - component: {fileID: 309969112}
   - component: {fileID: 309969111}
   - component: {fileID: 309969110}
+  - component: {fileID: 309969109}
   m_Layer: 0
   m_Name: BossDoorWall B
   m_TagString: Untagged
@@ -1517,6 +1518,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &309969109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309969108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0}
 --- !u!23 &309969110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1792,6 +1806,8 @@ GameObject:
   m_Component:
   - component: {fileID: 349130817}
   - component: {fileID: 349130816}
+  - component: {fileID: 349130819}
+  - component: {fileID: 349130818}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1821,13 +1837,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349130815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -32.033}
+  m_LocalPosition: {x: 0, y: 1.26, z: -32.033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1817876421}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &349130818
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349130815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0619215, y: 2.453236, z: 1.289362}
+  m_Center: {x: -0.04640144, y: -0.010353088, z: 0.01334095}
+--- !u!54 &349130819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349130815}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &401033100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400158, guid: ba428b33effb2e14f990f4d529b49611,
@@ -4805,35 +4850,6 @@ MonoBehaviour:
   - {fileID: 508386330}
   - {fileID: 401033100}
   - {fileID: 1134549115}
---- !u!54 &1817876425
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817876419}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1817876427
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817876419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.25697204, y: 0.3559309, z: 0.21579038}
-  m_Center: {x: -0.003485966, y: 0.17895289, z: 0.0033293965}
 --- !u!4 &1820622168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400080, guid: ba428b33effb2e14f990f4d529b49611,
