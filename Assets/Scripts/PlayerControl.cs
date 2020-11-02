@@ -12,27 +12,39 @@ public class PlayerControl : MonoBehaviour
     private Quaternion targetRotation;
     Transform cam;
 
+    public Animator animator;
+    public GameObject hitbox;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main.transform;
+        hitbox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         GetInput();
-        if (Mathf.Abs(input.x) < 1 && Mathf.Abs(input.y) < 1) { return; }
-        CalculateDirection();
-        Rotate();
-        Move();
+        // return if there's no directional input
+        float horizontalMove = Mathf.Abs(input.x);
+        float verticalMove = Mathf.Abs(input.y);
+        if (horizontalMove < 1 && verticalMove < 1)
+        {
+            animator.SetBool("IsMoving", false);
+            return;
+        }
+        Movement();
     }
 
     void GetInput()
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
     }
 
     void CalculateDirection()
@@ -51,5 +63,36 @@ public class PlayerControl : MonoBehaviour
     void Move()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
+    }
+
+    void Movement()
+    {
+        animator.SetBool("IsMoving", true);
+        CalculateDirection();
+        Rotate();
+        Move();
+    }
+
+    void Attack()
+    {
+        animator.SetTrigger("Attack");
+        // hitbox active so it can interact with other objects
+        hitbox.SetActive(true);
+
+        // detect collision with objects
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 2, 3), hitbox.transform.rotation);
+
+        // damage detected enemies
+        foreach (Collider enemy in hitEnemies)
+        {
+            if (enemy.CompareTag("Enemy"))
+            {
+                enemy.GetComponent<Enemy>().health -= 1;
+            }
+        }
+
+        // make hitbox inactive
+        hitbox.SetActive(false);
+        animator.SetTrigger("Idle");
     }
 }
