@@ -14,11 +14,15 @@ public class ChangeAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            anim.SetTrigger("Fight");
+            anim.SetTrigger("Run");
         }
-        if (Input.GetKeyDown(KeyCode.I))
+        else if (Input.GetMouseButtonDown(0))
+        {
+            anim.SetTrigger("Attack");
+        }
+        else
         {
             anim.SetTrigger("Idle");
         }

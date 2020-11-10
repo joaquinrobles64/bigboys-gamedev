@@ -11,9 +11,8 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            // increase speed or whatever
             Destroy(this.gameObject);
         }
     }

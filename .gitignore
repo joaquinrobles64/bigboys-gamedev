@@ -69,3 +69,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Probuilder Settings.json
+/[Pp]rojectSettings/Packages/com.unity.probuilder/Settings.json
+
+#Ignore all .meta file
+ *.meta
+#But not source file with postfix. which is everything but a folder
+ !*.*.meta
