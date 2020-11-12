@@ -905,7 +905,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (4)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &166331932
 BoxCollider:
@@ -2377,7 +2377,7 @@ Transform:
   - {fileID: 845599768}
   - {fileID: 1824947243}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &176058973
 PrefabInstance:
@@ -2388,7 +2388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (6)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!1 &309799522
 GameObject:
@@ -3579,8 +3579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d578ffc2f685a9438ba981f9a97ecee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  turnspeed: 20
+  speed: 10
+  turnspeed: 10
   animator: {fileID: 1817876424}
   hitbox: {fileID: 1384759926}
 --- !u!4 &349130817
@@ -3985,7 +3985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (12)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -4073,7 +4073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &442205009
 BoxCollider:
@@ -4219,7 +4219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (12)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -4307,7 +4307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &492098766
 BoxCollider:
@@ -4331,7 +4331,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (5)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4513,7 +4513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!1 &523134439
 GameObject:
@@ -5459,7 +5459,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (4)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -5547,7 +5547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &606880290
 BoxCollider:
@@ -5900,7 +5900,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (7)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -5988,7 +5988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &663926108
 BoxCollider:
@@ -6372,7 +6372,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (13)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -6460,7 +6460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &733030527
 BoxCollider:
@@ -6766,8 +6766,9 @@ Transform:
   - {fileID: 421249001}
   - {fileID: 1414322010}
   - {fileID: 963134553}
+  - {fileID: 1512730613}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &784148638
 GameObject:
@@ -7313,7 +7314,7 @@ Transform:
   - {fileID: 1095936649}
   - {fileID: 523134440}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &796733329 stripped
 Transform:
@@ -11028,7 +11029,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894863647
 GameObject:
@@ -11137,7 +11138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (9)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -11225,7 +11226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &949558863
 BoxCollider:
@@ -11832,7 +11833,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (11)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -11920,7 +11921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1062815729
 BoxCollider:
@@ -12188,23 +12189,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 782544916}
     m_Modifications:
     - target: {fileID: 100116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_Name
-      value: Mesh
+      value: KingJuju
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 159.32156
+      value: -898.67847
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.83
+      value: 534.17
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 291.50406
+      value: -435.49594
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12224,7 +12225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14158,7 +14159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (10)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -14246,7 +14247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1143707499
 BoxCollider:
@@ -14270,7 +14271,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (3)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -14358,7 +14359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1145734112
 BoxCollider:
@@ -14599,7 +14600,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (3)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14674,7 +14675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (8)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -14762,7 +14763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1223556627
 BoxCollider:
@@ -14885,7 +14886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (13)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -14973,7 +14974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1237196801
 BoxCollider:
@@ -15009,7 +15010,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (14)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -15097,7 +15098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1268082284
 BoxCollider:
@@ -15307,7 +15308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (2)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15382,7 +15383,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (1)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -15470,7 +15471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1326833481
 BoxCollider:
@@ -39267,7 +39268,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (15)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -39355,7 +39356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1410817479
 BoxCollider:
@@ -39490,7 +39491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (5)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -39578,7 +39579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1474357518
 BoxCollider:
@@ -48320,6 +48321,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1510965510}
   m_Mesh: {fileID: 81762087}
+--- !u!4 &1512730613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400116, guid: 9df7021e1cc3dda4181323979d90c1ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 1108885372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1529883032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48430,7 +48437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!1 &1534157522
 GameObject:
@@ -48663,7 +48670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1569792285
 BoxCollider:
@@ -48793,7 +48800,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (2)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -48881,7 +48888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1600394721
 BoxCollider:
@@ -50583,7 +50590,7 @@ Transform:
   m_Children:
   - {fileID: 1120462978}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1625716589
 Mesh:
@@ -50857,7 +50864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1661036497
 BoxCollider:
@@ -51082,7 +51089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!1 &1768047872
 GameObject:
@@ -51215,7 +51222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1772300547
 BoxCollider:
@@ -51779,7 +51786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &1820756447
 BoxCollider:
@@ -55105,7 +55112,7 @@ Transform:
   - {fileID: 1588928764}
   - {fileID: 91682961}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1891889441
 PrefabInstance:
@@ -55116,7 +55123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_Name
-      value: crate_wood (1)
+      value: crate_wood
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4062431ddc400024eb3dc2f51a7f4c52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -65160,7 +65167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_Name
-      value: Alien (6)
+      value: Alien
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5be2c6dc7d0cd11418701026bf971b37, type: 3}
       propertyPath: m_TagString
@@ -65248,7 +65255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e80f181c95fed34a973bbd0150c8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   damage: 0
 --- !u!65 &2121075029
 BoxCollider:
