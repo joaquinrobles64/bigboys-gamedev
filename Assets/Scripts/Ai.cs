@@ -23,16 +23,16 @@ public class Ai : MonoBehaviour
         if(!agent.hasPath) {
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
-
-        if (agent.velocity.magnitude < float.Epsilon && agent.hasPath)
+        if (agent.velocity.magnitude <= 0 && agent.hasPath)
         {
+            // Debug.Log("yes");
             SolveStuck();
         }
     }
 
     IEnumerator SolveStuck() {
         Vector3 lastPosition = this.transform.position;
- 
+        // Debug.Log("working");
         while (true) {
             yield return new WaitForSeconds(3f);
  
