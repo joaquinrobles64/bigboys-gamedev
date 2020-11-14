@@ -7,6 +7,7 @@ public class Ai : MonoBehaviour
 {
 
     private NavMeshAgent agent;
+    public Animator animator;
 
     // public int room;
     public float radius;
@@ -21,6 +22,7 @@ public class Ai : MonoBehaviour
     void Update()
     {
         if(!agent.hasPath) {
+            animator.SetBool("IsMoving", true);
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
         if (agent.velocity.magnitude <= 0 && agent.hasPath)
@@ -28,7 +30,17 @@ public class Ai : MonoBehaviour
             // Debug.Log("yes");
             SolveStuck();
         }
+
+        // if (agent.horizontalMove < 1 && agent.verticalMove < 1)
+        // {
+        //     animator.SetBool("IsMoving", false);
+        //     return;
+        // }
     }
+
+    // void Attack() {
+    //     animator.SetTrigger("Attack");
+    // }
 
     IEnumerator SolveStuck() {
         Vector3 lastPosition = this.transform.position;
