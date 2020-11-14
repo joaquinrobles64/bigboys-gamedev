@@ -9,6 +9,7 @@ public class GetPoint : MonoBehaviour
     public static GetPoint Instance;
 
     public float range;
+    public int room;
 
     private void Awake() {
         Instance = this;

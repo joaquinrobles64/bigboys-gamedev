@@ -8,6 +8,7 @@ public class Ai : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    // public int room;
     public float radius;
 
      // Start is called before the first frame update
@@ -21,6 +22,32 @@ public class Ai : MonoBehaviour
     {
         if(!agent.hasPath) {
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
+        }
+
+        if (agent.velocity.magnitude < float.Epsilon && agent.hasPath)
+        {
+            SolveStuck();
+        }
+    }
+
+    IEnumerator SolveStuck() {
+        Vector3 lastPosition = this.transform.position;
+ 
+        while (true) {
+            yield return new WaitForSeconds(3f);
+ 
+            //Maybe we can also use agent.velocity.sqrMagnitude == 0f or similar
+            if (!agent.pathPending && agent.hasPath && agent.remainingDistance > agent.stoppingDistance) {
+                Vector3 currentPosition = this.transform.position;
+                if (Vector3.Distance(currentPosition, lastPosition) < 1f) {
+                    Vector3 destination = agent.destination;
+                    agent.ResetPath();
+                    agent.SetDestination(destination);
+                    Debug.Log("Agent Is Stuck");
+                }
+                Debug.Log("Current Position " + currentPosition + " Last Position " + lastPosition);
+                lastPosition = currentPosition;
+            }
         }
     }
 
