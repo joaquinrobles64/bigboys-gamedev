@@ -14,12 +14,14 @@ public class PlayerControl : MonoBehaviour
 
     public Animator animator;
     public GameObject hitbox;
+    public GameObject activator;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main.transform;
         hitbox.SetActive(false);
+        // activator.SetActive(true);
     }
 
     // Update is called once per frame
@@ -63,6 +65,15 @@ public class PlayerControl : MonoBehaviour
     void Move()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
+        // Collider[] activatedEnemies = Physics.OverlapBox(activator.transform.position, new Vector3(34, 1, 35), activator.transform.rotation);
+
+        // foreach (Collider enemy in activatedEnemies)
+        //     {
+        //         if (enemy.CompareTag("Enemy"))
+        //         {
+        //             enemy.GetComponent<Enemy>().activated = true;
+        //         }
+        //     }
     }
 
     void Movement()
@@ -80,7 +91,9 @@ public class PlayerControl : MonoBehaviour
         hitbox.SetActive(true);
 
         // detect collision with objects
-        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 2, 3), hitbox.transform.rotation);
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 2, 1), hitbox.transform.rotation);
+
+
 
         // damage detected enemies
         foreach (Collider enemy in hitEnemies)
