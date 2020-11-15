@@ -91,7 +91,7 @@ public class PlayerControl : MonoBehaviour
         hitbox.SetActive(true);
 
         // detect collision with objects
-        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 2, 1), hitbox.transform.rotation);
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 1, 8), hitbox.transform.rotation);
 
 
 
