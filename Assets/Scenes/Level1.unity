@@ -839,7 +839,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90299293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -873,6 +873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 90299294}
   activated: 0
 --- !u!1 &91682956
 GameObject:
@@ -1744,6 +1746,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 166331933}
   activated: 0
 --- !u!65 &166331932
 BoxCollider:
@@ -1793,7 +1797,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166331930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -7032,6 +7036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 296597597}
   activated: 0
 --- !u!95 &296597597 stripped
 Animator:
@@ -7068,7 +7074,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296597594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -10860,6 +10866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 442205010}
   activated: 0
 --- !u!65 &442205009
 BoxCollider:
@@ -10909,7 +10917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442205007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -11355,6 +11363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 492098767}
   activated: 0
 --- !u!65 &492098766
 BoxCollider:
@@ -11404,7 +11414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492098764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -11728,6 +11738,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 519319292}
   activated: 0
 --- !u!95 &519319292 stripped
 Animator:
@@ -11749,6 +11761,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 519319292}
   radius: 3
+--- !u!195 &519319294
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519319289}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &523134439
 GameObject:
   m_ObjectHideFlags: 0
@@ -12798,6 +12832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 606880291}
   activated: 0
 --- !u!65 &606880290
 BoxCollider:
@@ -12847,7 +12883,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606880288}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -13391,6 +13427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 663926111}
   activated: 0
 --- !u!65 &663926108
 BoxCollider:
@@ -13412,7 +13450,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663926106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -13977,6 +14015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 733030528}
   activated: 0
 --- !u!65 &733030527
 BoxCollider:
@@ -14026,7 +14066,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733030525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -19248,6 +19288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 949558864}
   activated: 0
 --- !u!65 &949558863
 BoxCollider:
@@ -19275,7 +19317,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949558861}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -19829,6 +19871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1062815730}
   activated: 0
 --- !u!65 &1062815729
 BoxCollider:
@@ -19856,7 +19900,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062815727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -22562,6 +22606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1143707500}
   activated: 0
 --- !u!65 &1143707499
 BoxCollider:
@@ -22589,7 +22635,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143707497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -22721,6 +22767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1145734113}
   activated: 0
 --- !u!65 &1145734112
 BoxCollider:
@@ -22770,7 +22818,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145734110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -23219,6 +23267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1223556628}
   activated: 0
 --- !u!65 &1223556627
 BoxCollider:
@@ -23246,7 +23296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223556625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -23477,6 +23527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1237196802}
   activated: 0
 --- !u!65 &1237196801
 BoxCollider:
@@ -23526,7 +23578,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237196799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -23648,6 +23700,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1268082285}
   activated: 0
 --- !u!65 &1268082284
 BoxCollider:
@@ -23697,7 +23751,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268082282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -24190,6 +24244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1326833482}
   activated: 0
 --- !u!65 &1326833481
 BoxCollider:
@@ -24224,6 +24280,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1326833482}
   radius: 3
+--- !u!195 &1326833484
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326833479}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1332379838
 GameObject:
   m_ObjectHideFlags: 0
@@ -48148,6 +48226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1384411906}
   activated: 0
 --- !u!65 &1384411905
 BoxCollider:
@@ -48197,7 +48277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384411902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -48351,6 +48431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1410817480}
   activated: 0
 --- !u!65 &1410817479
 BoxCollider:
@@ -48400,7 +48482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410817477}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -48433,6 +48515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1420204192}
   activated: 0
 --- !u!65 &1420204191
 BoxCollider:
@@ -48482,7 +48566,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420204188}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -48783,6 +48867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1474357519}
   activated: 0
 --- !u!65 &1474357518
 BoxCollider:
@@ -48832,7 +48918,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474357516}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -57718,6 +57804,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1512894166}
   activated: 0
 --- !u!65 &1512894165
 BoxCollider:
@@ -57767,7 +57855,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512894162}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -57890,6 +57978,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1529883037}
   activated: 0
 --- !u!95 &1529883037 stripped
 Animator:
@@ -57926,7 +58016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529883034}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -58171,6 +58261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1569792289}
   activated: 0
 --- !u!65 &1569792285
 BoxCollider:
@@ -58214,7 +58306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569792283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -58452,6 +58544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1600394722}
   activated: 0
 --- !u!65 &1600394721
 BoxCollider:
@@ -58501,7 +58595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600394719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -60312,6 +60406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1661036498}
   activated: 0
 --- !u!65 &1661036497
 BoxCollider:
@@ -60361,7 +60457,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661036495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -60486,6 +60582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1697337727}
   activated: 0
 --- !u!65 &1697337726
 BoxCollider:
@@ -60535,7 +60633,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697337723}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -60837,7 +60935,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
-  activated: 0
+  radius: 3
+  animator: {fileID: 1760789437}
+  activated: 1
 --- !u!114 &1760789439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60845,7 +60945,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760789435}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -61012,6 +61112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1772300548}
   activated: 0
 --- !u!65 &1772300547
 BoxCollider:
@@ -61061,7 +61163,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772300545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -61703,6 +61805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1820756451}
   activated: 0
 --- !u!65 &1820756447
 BoxCollider:
@@ -61724,7 +61828,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820756445}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -65608,6 +65712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 1924070446}
   activated: 0
 --- !u!65 &1924070445
 BoxCollider:
@@ -65657,7 +65763,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924070442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -75156,6 +75262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 2094593204}
   activated: 0
 --- !u!65 &2094593203
 BoxCollider:
@@ -75205,7 +75313,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094593200}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
@@ -75631,6 +75739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   damage: 0
+  radius: 3
+  animator: {fileID: 2121075030}
   activated: 0
 --- !u!65 &2121075029
 BoxCollider:
@@ -75680,7 +75790,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121075027}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60f9073789545154db5f3e6c0dc7147e, type: 3}
   m_Name: 
