@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : MonoBehaviour
 {
     public int health;
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private int count = 0;
     public bool activated = false;
+    public float m_Range = 25.0f;
 
 
     private void Start()
@@ -24,6 +26,11 @@ public class Enemy : MonoBehaviour
     {
         if(health > 0) {
             Move();
+            // if (agent.hasPath){
+            // return;
+            // }
+            // agent.SetDestination(m_Range * Random.insideUnitCircle.normalized);
+
         } else{
             if(count == 0) {
             Die();
@@ -32,15 +39,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // private void Start()
-    // {
-    //     agent = GetComponent<NavMeshAgent> ();
-    // }
-
     void Move() {
 
         if(!agent.hasPath) {
             animator.SetBool("IsMoving", true);
+
+            if(activated) {
+                agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
+            }
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
         if (agent.velocity.magnitude <= 0 && agent.hasPath)
