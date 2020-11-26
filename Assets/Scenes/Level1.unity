@@ -875,8 +875,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 90299294}
-  activated: 0
-  m_Range: 25
 --- !u!1 &91682956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,8 +2071,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 166331933}
-  activated: 0
-  m_Range: 25
 --- !u!65 &166331932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6148,7 +6144,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15036
+  m_Name: pb_Mesh15032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6311,7 +6307,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16652
+  m_Name: pb_Mesh16650
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6716,7 +6712,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15568
+  m_Name: pb_Mesh15562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6930,7 +6926,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16638
+  m_Name: pb_Mesh16636
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7448,8 +7444,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 296597597}
-  activated: 0
-  m_Range: 25
 --- !u!95 &296597597 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 5be2c6dc7d0cd11418701026bf971b37,
@@ -7863,7 +7857,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15778
+  m_Name: pb_Mesh15772
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8599,8 +8593,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 442205010}
-  activated: 0
-  m_Range: 25
 --- !u!65 &442205009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8809,8 +8801,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 492098767}
-  activated: 0
-  m_Range: 25
 --- !u!65 &492098766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9185,8 +9175,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 519319292}
-  activated: 0
-  m_Range: 25
 --- !u!95 &519319292 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 5be2c6dc7d0cd11418701026bf971b37,
@@ -9440,7 +9428,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16404
+  m_Name: pb_Mesh16402
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10280,8 +10268,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 606880291}
-  activated: 0
-  m_Range: 25
 --- !u!65 &606880290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10876,8 +10862,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 663926111}
-  activated: 0
-  m_Range: 25
 --- !u!65 &663926108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11465,8 +11449,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 733030528}
-  activated: 0
-  m_Range: 25
 --- !u!65 &733030527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11661,7 +11643,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15086
+  m_Name: pb_Mesh15082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16477,7 +16459,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15056
+  m_Name: pb_Mesh15052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16739,8 +16721,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 949558864}
-  activated: 0
-  m_Range: 25
 --- !u!65 &949558863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16802,7 +16782,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16258
+  m_Name: pb_Mesh16252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17327,8 +17307,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1062815730}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1062815729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17390,7 +17368,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16572
+  m_Name: pb_Mesh16570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17553,7 +17531,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16138
+  m_Name: pb_Mesh16132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20013,7 +19991,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16558
+  m_Name: pb_Mesh16556
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20393,8 +20371,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1143707500}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1143707499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20555,8 +20531,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1145734113}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1145734112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20618,7 +20592,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15870
+  m_Name: pb_Mesh15864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24223,8 +24197,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1223556628}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1223556627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24484,8 +24456,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1237196802}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1237196801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24658,8 +24628,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1268082285}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1268082284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25203,8 +25171,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1326833482}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1326833481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25359,7 +25325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15636
+  m_Name: pb_Mesh15630
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49186,8 +49152,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1384411906}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1384411905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49392,8 +49356,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1410817480}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1410817479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49477,8 +49439,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1420204192}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1420204191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49558,7 +49518,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15226
+  m_Name: pb_Mesh15222
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49721,7 +49681,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16586
+  m_Name: pb_Mesh16584
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49993,8 +49953,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1474357519}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1474357518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58931,8 +58889,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1512894166}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1512894165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59106,8 +59062,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1529883037}
-  activated: 0
-  m_Range: 25
 --- !u!95 &1529883037 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 5be2c6dc7d0cd11418701026bf971b37,
@@ -59390,8 +59344,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1569792289}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1569792285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59674,8 +59626,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1600394722}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1600394721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61426,7 +61376,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16032
+  m_Name: pb_Mesh16026
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -61750,8 +61700,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1661036498}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1661036497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61784,7 +61732,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 5
   avoidancePriority: 50
-  m_AngularSpeed: 500
+  m_AngularSpeed: 700
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -61905,7 +61853,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15610
+  m_Name: pb_Mesh15604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -62100,8 +62048,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1697337727}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1697337726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62454,8 +62400,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1760789437}
-  activated: 1
-  m_Range: 25
 --- !u!114 &1760789439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62483,7 +62427,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 5
   avoidancePriority: 50
-  m_AngularSpeed: 500
+  m_AngularSpeed: 700
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -62492,6 +62436,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 3
   m_ObstacleAvoidanceType: 4
+--- !u!54 &1760789441
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760789435}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1768047872
 GameObject:
   m_ObjectHideFlags: 0
@@ -62632,8 +62592,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1772300548}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1772300547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62666,7 +62624,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 5
   avoidancePriority: 50
-  m_AngularSpeed: 500
+  m_AngularSpeed: 700
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -62707,7 +62665,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15418
+  m_Name: pb_Mesh15412
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -63153,8 +63111,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1820756451}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1820756447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66760,7 +66716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15104
+  m_Name: pb_Mesh15100
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67061,8 +67017,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 1924070446}
-  activated: 0
-  m_Range: 25
 --- !u!65 &1924070445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67293,7 +67247,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15622
+  m_Name: pb_Mesh15616
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -67456,7 +67410,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15370
+  m_Name: pb_Mesh15364
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -79940,8 +79894,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 2094593204}
-  activated: 0
-  m_Range: 25
 --- !u!65 &2094593203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80742,8 +80694,6 @@ MonoBehaviour:
   damage: 0
   radius: 3
   animator: {fileID: 2121075030}
-  activated: 0
-  m_Range: 25
 --- !u!65 &2121075029
 BoxCollider:
   m_ObjectHideFlags: 0

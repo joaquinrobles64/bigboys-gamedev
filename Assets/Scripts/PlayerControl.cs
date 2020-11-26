@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     {
         cam = Camera.main.transform;
         hitbox.SetActive(false);
-        // activator.SetActive(true);
+        activator.SetActive(true);
     }
 
     // Update is called once per frame
@@ -65,15 +65,16 @@ public class PlayerControl : MonoBehaviour
     void Move()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
-        // Collider[] activatedEnemies = Physics.OverlapBox(activator.transform.position, new Vector3(34, 1, 35), activator.transform.rotation);
+        Collider[] activatedEnemies = Physics.OverlapBox(activator.transform.position, new Vector3(15, 1, 14), activator.transform.rotation);
 
-        // foreach (Collider enemy in activatedEnemies)
-        //     {
-        //         if (enemy.CompareTag("Enemy"))
-        //         {
-        //             enemy.GetComponent<Enemy>().activated = true;
-        //         }
-        //     }
+        foreach (Collider enemy in activatedEnemies)
+            {
+                if (enemy.CompareTag("Enemy"))
+                {
+                    enemy.GetComponent<Enemy>().setActivation(true);
+                   UnityEngine.Debug.Log("Workin");
+                }
+            }
     }
 
     void Movement()

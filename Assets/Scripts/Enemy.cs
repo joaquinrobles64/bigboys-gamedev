@@ -12,13 +12,14 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     private NavMeshAgent agent;
     private int count = 0;
-    public bool activated = false;
-    public float m_Range = 25.0f;
-
+    private bool activated = false;
+    private float m_Range = 25.0f;
+    private GameObject player;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent> ();
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class Enemy : MonoBehaviour
     {
         if(health > 0) {
             Move();
-            // if (agent.hasPath){
+            // if (agent.pathPending || agent.remainingDistance > 0.1f){
             // return;
             // }
             // agent.SetDestination(m_Range * Random.insideUnitCircle.normalized);
@@ -38,22 +39,23 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    
 
     void Move() {
 
         if(!agent.hasPath) {
             animator.SetBool("IsMoving", true);
-
-            if(activated) {
-                agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
-            }
-            agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
-        }
-        if (agent.velocity.magnitude <= 0 && agent.hasPath)
-        {
             SolveStuck();
         }
-
+            if(activated) {
+                Debug.Log("Tis also working");
+                agent.speed = 10;
+                agent.ResetPath();
+                agent.SetDestination(player.transform.position);
+            // }else{
+            //         agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
+            //      }
+            }
     }
 
     IEnumerator SolveStuck() {
@@ -84,6 +86,10 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("Dead");
             Destroy(this.gameObject, 2);
         }
+    }
+
+    public void setActivation(bool result) {
+        activated = result;
     }
 
     #if UNITY_EDITOR
