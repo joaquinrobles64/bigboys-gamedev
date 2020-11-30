@@ -65,7 +65,7 @@ public class PlayerControl : MonoBehaviour
     void Move()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
-        Collider[] activatedEnemies = Physics.OverlapBox(activator.transform.position, new Vector3(15, 1, 14), activator.transform.rotation);
+        Collider[] activatedEnemies = Physics.OverlapBox(activator.transform.position, new Vector3(10, 1, 15), activator.transform.rotation);
 
         foreach (Collider enemy in activatedEnemies)
             {
@@ -92,7 +92,7 @@ public class PlayerControl : MonoBehaviour
         hitbox.SetActive(true);
 
         // detect collision with objects
-        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(1, 1, 8), hitbox.transform.rotation);
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(0, 1, 6), hitbox.transform.rotation);
 
 
 
@@ -106,7 +106,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         // make hitbox inactive
-        hitbox.SetActive(false);
+        // hitbox.SetActive(false);
         animator.SetTrigger("Idle");
     }
 }

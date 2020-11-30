@@ -45,10 +45,11 @@ public class Enemy : MonoBehaviour
 
         if(!agent.hasPath) {
             animator.SetBool("IsMoving", true);
-            SolveStuck();
+            // SolveStuck();
+            agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
             if(activated) {
-                Debug.Log("Tis also working");
+                // Debug.Log("Tis also working");
                 agent.speed = 10;
                 agent.ResetPath();
                 agent.SetDestination(player.transform.position);
@@ -73,7 +74,7 @@ public class Enemy : MonoBehaviour
                     agent.SetDestination(destination);
                     Debug.Log("Agent Is Stuck");
                 }
-                Debug.Log("Current Position " + currentPosition + " Last Position " + lastPosition);
+                Debug.Log("This thing on?");
                 lastPosition = currentPosition;
             }
         }
