@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public int health;
     public float speed;
     public float turnspeed;
-    private Vector2 input;
+    public bool canTakeDamage = true;
+    private float damageTimeout = 1f;
     private float angle;
+    private Vector2 input;
     private Quaternion targetRotation;
     Transform cam;
 
     public Animator animator;
     public GameObject hitbox;
     public GameObject activator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Die();
         GetInput();
         // return if there's no directional input
         float horizontalMove = Mathf.Abs(input.x);
@@ -72,7 +77,6 @@ public class PlayerControl : MonoBehaviour
                 if (enemy.CompareTag("Enemy"))
                 {
                     enemy.GetComponent<Enemy>().setActivation(true);
-                   UnityEngine.Debug.Log("Workin");
                 }
             }
     }
@@ -106,7 +110,30 @@ public class PlayerControl : MonoBehaviour
         }
 
         // make hitbox inactive
-        // hitbox.SetActive(false);
+        hitbox.SetActive(false);
         animator.SetTrigger("Idle");
+    }
+
+    public void TakeDamage() {
+        health -= 1;
+        StartCoroutine(damageTimer());
+    }
+    
+    private IEnumerator damageTimer() {
+    canTakeDamage = false;
+    // active = false;
+    yield return new WaitForSeconds(damageTimeout);
+    canTakeDamage = true;
+    // active = true;
+    }
+
+
+    void Die()
+    {
+        if (health <= 0)
+        {   animator.SetBool("IsMoving", false);
+            animator.SetTrigger("Dead");
+            Destroy(this.gameObject, 2);
+        }
     }
 }

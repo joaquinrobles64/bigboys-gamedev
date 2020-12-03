@@ -13,8 +13,9 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private int count = 0;
     private bool activated = false;
-    private float m_Range = 25.0f;
     private GameObject player;
+    public BoxCollider enemysHitbox;
+
 
     private void Start()
     {
@@ -27,11 +28,7 @@ public class Enemy : MonoBehaviour
     {
         if(health > 0) {
             Move();
-            // if (agent.pathPending || agent.remainingDistance > 0.1f){
-            // return;
-            // }
-            // agent.SetDestination(m_Range * Random.insideUnitCircle.normalized);
-
+            Attack();
         } else{
             if(count == 0) {
             Die();
@@ -49,14 +46,40 @@ public class Enemy : MonoBehaviour
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
             if(activated) {
-                // Debug.Log("Tis also working");
                 agent.speed = 10;
                 agent.ResetPath();
                 agent.SetDestination(player.transform.position);
-            // }else{
-            //         agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
-            //      }
             }
+    }
+
+    void Attack() {
+
+        Collider[] hitPlayer = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3(2, 2, 1), enemysHitbox.transform.rotation);
+
+        foreach (Collider playerHit in hitPlayer)
+            {
+                if (playerHit.CompareTag("Player"))
+                {
+                    if(playerHit.GetComponent<PlayerControl>().canTakeDamage)
+                    {
+                        animator.SetTrigger("Attack");
+                        AttackConfirming();
+                    }
+                }
+            }
+            animator.SetTrigger("Idle");
+    }
+
+    void AttackConfirming() {
+        Collider[] hitPlayerConfirmation = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3((float)0.5, 2, (float)0.7), enemysHitbox.transform.rotation);
+        foreach (Collider playerHitConfirmation in hitPlayerConfirmation) 
+        {   
+            if (playerHitConfirmation.CompareTag("Player"))
+            {
+                Debug.Log("Hit");
+                player.GetComponent<PlayerControl>().TakeDamage();
+            }
+        }
     }
 
     IEnumerator SolveStuck() {
