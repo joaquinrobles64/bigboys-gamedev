@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
         }
     }
     
-
     void Move() {
 
         if(!agent.hasPath) {

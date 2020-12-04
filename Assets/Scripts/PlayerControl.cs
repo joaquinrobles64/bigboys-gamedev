@@ -9,7 +9,8 @@ public class PlayerControl : MonoBehaviour
     public float speed;
     public float turnspeed;
     public bool canTakeDamage = true;
-    private float damageTimeout = 1f;
+    public int damage = 1;
+    private float damageTimeout = 2f;
     private float angle;
     private Vector2 input;
     private Quaternion targetRotation;
@@ -48,7 +49,7 @@ public class PlayerControl : MonoBehaviour
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetMouseButtonDown(0))
         {
             Attack();
         }
@@ -92,7 +93,6 @@ public class PlayerControl : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        // hitbox active so it can interact with other objects
         hitbox.SetActive(true);
 
         // detect collision with objects
@@ -105,7 +105,7 @@ public class PlayerControl : MonoBehaviour
         {
             if (enemy.CompareTag("Enemy"))
             {
-                enemy.GetComponent<Enemy>().health -= 1;
+                enemy.GetComponent<Enemy>().health -= damage;
             }
         }
 
@@ -120,11 +120,9 @@ public class PlayerControl : MonoBehaviour
     }
     
     private IEnumerator damageTimer() {
-    canTakeDamage = false;
-    // active = false;
-    yield return new WaitForSeconds(damageTimeout);
-    canTakeDamage = true;
-    // active = true;
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageTimeout);
+        canTakeDamage = true;
     }
 
 

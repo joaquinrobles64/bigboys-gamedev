@@ -10397,6 +10397,7 @@ MonoBehaviour:
   speed: 15
   turnspeed: 15
   canTakeDamage: 1
+  damage: 1
   animator: {fileID: 1817876424}
   hitbox: {fileID: 1384759926}
   activator: {fileID: 1094396107}
