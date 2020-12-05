@@ -21,11 +21,6 @@ public class Health : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
     }
 
-    public decimal FindDifference(decimal nr1, decimal nr2)
-    {
-        return Math.Abs(nr1 - nr2);
-    }
-
     private void Update()
     {
         if(GetComponent<PlayerControl>().health != currentHealth) {

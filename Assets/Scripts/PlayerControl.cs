@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// using System.String;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     public float turnspeed;
     public bool canTakeDamage = true;
     public int damage = 1;
+    public string currentPowerUp = "";
     private float damageTimeout = 2f;
     private float angle;
     private Vector2 input;
@@ -34,6 +36,7 @@ public class PlayerControl : MonoBehaviour
     {
         Die();
         GetInput();
+        if(health >= 1){
         // return if there's no directional input
         float horizontalMove = Mathf.Abs(input.x);
         float verticalMove = Mathf.Abs(input.y);
@@ -43,6 +46,7 @@ public class PlayerControl : MonoBehaviour
             return;
         }
         Movement();
+        }
     }
 
     void GetInput()
@@ -98,8 +102,6 @@ public class PlayerControl : MonoBehaviour
         // detect collision with objects
         Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(0, 1, 6), hitbox.transform.rotation);
 
-
-
         // damage detected enemies
         foreach (Collider enemy in hitEnemies)
         {
@@ -114,17 +116,23 @@ public class PlayerControl : MonoBehaviour
         animator.SetTrigger("Idle");
     }
 
-    public void TakeDamage() {
+    public void TakeDamage() 
+    {
         health -= 1;
         StartCoroutine(damageTimer());
     }
     
-    private IEnumerator damageTimer() {
+    private IEnumerator damageTimer() 
+    {
         canTakeDamage = false;
         yield return new WaitForSeconds(damageTimeout);
         canTakeDamage = true;
     }
 
+    // private IEnumerator flashPlayer()
+    // {
+    //     GetComponent(MeshRenderer).enabled = false;
+    // }
 
     void Die()
     {

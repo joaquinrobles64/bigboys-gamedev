@@ -19,39 +19,49 @@ public class Collectible : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && GetComponentInParent<CollectiblesScript>().canUse)
         {
                 int rand = Random.Range(1, 4);
-                Debug.Log("rand");
+                Debug.Log(rand);
 
             switch(rand) 
             {
                 case 1:
-                 if(player.GetComponent<PlayerControl>().health < 5)
-                    player.GetComponent<PlayerControl>().health = 5;
-                 else
-                    player.GetComponent<PlayerControl>().health += 2;
+                  player.GetComponent<PlayerControl>().currentPowerUp = "Heart";
+                  if(player.GetComponent<PlayerControl>().health < 5)
+                     player.GetComponent<PlayerControl>().health = 5;
+                  else
+                     player.GetComponent<PlayerControl>().health += 2;
+                     Destroy(this.gameObject, 3);
                 break;
 
                 case 2:
-                  player.GetComponent<PlayerControl>().speed = 25;
-                  StartCoroutine(powerUpTimer());
-                  player.GetComponent<PlayerControl>().speed = 10;
+                  player.GetComponent<PlayerControl>().currentPowerUp = "Speed";
+                  StartCoroutine(powerUpTimerSpeed());
                 break;
 
                 case 3:
-                  player.GetComponent<PlayerControl>().damage = 2;
-                  StartCoroutine(powerUpTimer());
-                  player.GetComponent<PlayerControl>().damage = 1;
+                  player.GetComponent<PlayerControl>().currentPowerUp = "Damage";
+                  StartCoroutine(powerUpTimerDamage());
                 break; 
             }
-
-            Destroy(this.gameObject);
+            
+            GetComponent<MeshRenderer>().enabled = false;
+            Destroy(this.gameObject, 11);
         }
     }
 
-    private IEnumerator powerUpTimer() 
+    private IEnumerator powerUpTimerSpeed() 
     {
+         player.GetComponent<PlayerControl>().speed = 20;
         yield return new WaitForSeconds(powerUpTime);
+         player.GetComponent<PlayerControl>().speed = 15;
+    }
+
+    private IEnumerator powerUpTimerDamage() 
+    {
+        player.GetComponent<PlayerControl>().damage = 5;
+        yield return new WaitForSeconds(powerUpTime);
+        player.GetComponent<PlayerControl>().damage = 2;
     }
 }
