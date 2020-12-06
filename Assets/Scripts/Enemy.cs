@@ -119,7 +119,7 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("Dead");
             player.GetComponent<PlayerControl>().numKilled += 1;
             Debug.Log(player.GetComponent<PlayerControl>().numKilled);
-            Destroy(this.gameObject, 2);
+            Destroy(this.gameObject, (float) 1.5);
         }
     }
 
