@@ -39,11 +39,5 @@ public class ChangeAnimationCowboy : MonoBehaviour
         {
             anim.SetTrigger("Idle");
         }
-
-        // if(Input.GetKeyDown() == null) {
-        //     anim.SetTrigger("Idle");
-        // }
-
-
     }
 }

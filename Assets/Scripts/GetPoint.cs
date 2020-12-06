@@ -54,15 +54,4 @@ public class GetPoint : MonoBehaviour
             Gizmos.DrawWireSphere(transform.position, range);
         }
     #endif
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
 }

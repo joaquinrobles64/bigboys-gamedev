@@ -14,7 +14,6 @@ public class HealthBarScript : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         player.GetComponent<Health>().OnHealthPctChanged += HandleHealthChanged;
-        Debug.Log("It worked");
     }
 
     private void HandleHealthChanged(float pct)

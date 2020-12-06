@@ -22,7 +22,6 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player") && GetComponentInParent<CollectiblesScript>().canUse)
         {
                 int rand = Random.Range(1, 4);
-                Debug.Log(rand);
 
             switch(rand) 
             {

@@ -12,6 +12,9 @@ public class PlayerControl : MonoBehaviour
     public bool canTakeDamage = true;
     public int damage = 1;
     public string currentPowerUp = "";
+
+    [SerializeField]
+    public int numKilled = 0;
     private float damageTimeout = 2f;
     private float angle;
     private Vector2 input;
@@ -53,7 +56,7 @@ public class PlayerControl : MonoBehaviour
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J))
         {
             Attack();
         }

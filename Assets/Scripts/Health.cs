@@ -16,7 +16,6 @@ public class Health : MonoBehaviour
     public void ModifyHealth(int amount) 
     {
         currentHealth += amount;
-
         float currentHealthPct = ((float)currentHealth / (float)health);
         OnHealthPctChanged(currentHealthPct);
     }
