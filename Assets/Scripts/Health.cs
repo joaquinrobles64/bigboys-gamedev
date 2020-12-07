@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 5;
+    public int health = 8;
     private int currentHealth;
 
     public event Action<float> OnHealthPctChanged = delegate { };

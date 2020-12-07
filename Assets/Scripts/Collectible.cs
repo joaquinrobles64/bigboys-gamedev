@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    public AudioClip powerUpSound;
+    public AudioSource audioPowerUp;
     private GameObject player;
     private float powerUpTime = 10f;
+    
     
     private void Awake() 
     {
@@ -21,8 +24,8 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player") && GetComponentInParent<CollectiblesScript>().canUse)
         {
+                audioPowerUp.PlayOneShot(powerUpSound);
                 int rand = Random.Range(1, 4);
-
             switch(rand) 
             {
                 case 1:
@@ -61,6 +64,6 @@ public class Collectible : MonoBehaviour
     {
         player.GetComponent<PlayerControl>().damage = 5;
         yield return new WaitForSeconds(powerUpTime);
-        player.GetComponent<PlayerControl>().damage = 2;
+        player.GetComponent<PlayerControl>().damage = player.GetComponent<PlayerControl>().damage;
     }
 }

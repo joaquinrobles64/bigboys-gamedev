@@ -12,11 +12,13 @@ public class PlayerControl : MonoBehaviour
     public bool canTakeDamage = true;
     public int damage = 1;
     public string currentPowerUp = "";
-
-    [SerializeField]
     public int numKilled = 0;
+
+    private bool dead = false;
     private float damageTimeout = 2f;
     private float angle;
+    public float bulletSpeed = 10;
+    public GameObject bullet;
     private Vector2 input;
     private Quaternion targetRotation;
     Transform cam;
@@ -24,6 +26,12 @@ public class PlayerControl : MonoBehaviour
     public Animator animator;
     public GameObject hitbox;
     public GameObject activator;
+
+    public AudioClip hitMarker;
+    public AudioClip oof;
+    public AudioClip death;
+    public AudioSource audioSwitcher; 
+
     
 
     // Start is called before the first frame update
@@ -102,14 +110,18 @@ public class PlayerControl : MonoBehaviour
         animator.SetTrigger("Attack");
         hitbox.SetActive(true);
 
+        GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation);
+        bulletClone.transform.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+
         // detect collision with objects
-        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(0, 1, 6), hitbox.transform.rotation);
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3((float)0.5, 1, 8), hitbox.transform.rotation);
 
         // damage detected enemies
         foreach (Collider enemy in hitEnemies)
         {
             if (enemy.CompareTag("Enemy"))
             {
+                audioSwitcher.PlayOneShot(hitMarker);
                 enemy.GetComponent<Enemy>().health -= damage;
             }
         }
@@ -117,11 +129,13 @@ public class PlayerControl : MonoBehaviour
         // make hitbox inactive
         hitbox.SetActive(false);
         animator.SetTrigger("Idle");
+        Destroy(bulletClone, .5f);
     }
 
-    public void TakeDamage() 
+    public void TakeDamage(int enemyDamage) 
     {
-        health -= 1;
+        audioSwitcher.PlayOneShot(oof);
+        health -= enemyDamage;
         StartCoroutine(damageTimer());
     }
     
@@ -139,9 +153,11 @@ public class PlayerControl : MonoBehaviour
 
     void Die()
     {
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {   animator.SetBool("IsMoving", false);
             animator.SetTrigger("Dead");
+            audioSwitcher.PlayOneShot(death);
+            dead = true;
             Destroy(this.gameObject, 2);
         }
     }

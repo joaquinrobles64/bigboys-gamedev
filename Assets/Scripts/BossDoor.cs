@@ -5,7 +5,10 @@ using UnityEngine;
 public class BossDoor : MonoBehaviour
 {
     private GameObject player;
+    public AudioClip doorSound;
+    public AudioSource audioDoor;
     private bool notYet = true;
+    
 
     void Start()
     {
@@ -16,6 +19,10 @@ public class BossDoor : MonoBehaviour
     {
         if(player.GetComponent<PlayerControl>().numKilled >= 27 && notYet)
         {
+
+            audioDoor.PlayOneShot(doorSound);
+            notYet = true;
+
             for(int i = 0; i < transform.childCount; i++)
             {
                 if(transform.GetChild(i).gameObject.CompareTag("Door"))

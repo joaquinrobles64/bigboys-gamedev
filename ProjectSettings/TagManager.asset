@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Collectible
   - Door
+  - Room
+  - Level
   layers:
   - Default
   - TransparentFX

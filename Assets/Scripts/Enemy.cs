@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public int damage;
+    public int damage = 0;
     public float radius;
     public Animator animator;
     public BoxCollider enemysHitbox;
@@ -86,31 +86,10 @@ public class Enemy : MonoBehaviour
         {   
             if (playerHitConfirmation.CompareTag("Player"))
             {
-                Debug.Log("Hit");
-                player.GetComponent<PlayerControl>().TakeDamage();
+                player.GetComponent<PlayerControl>().TakeDamage(damage);
             }
         }
     }
-
-    // IEnumerator SolveStuck() {
-    //     Vector3 lastPosition = this.transform.position;
-    //     // Debug.Log("working");
-    //     while (true) {
-    //         yield return new WaitForSeconds(3f);
- 
-    //         //Maybe we can also use agent.velocity.sqrMagnitude == 0f or similar
-    //         if (!agent.pathPending && agent.hasPath && agent.remainingDistance > agent.stoppingDistance) {
-    //             Vector3 currentPosition = this.transform.position;
-    //             if (Vector3.Distance(currentPosition, lastPosition) < 1f) {
-    //                 Vector3 destination = agent.destination;
-    //                 agent.ResetPath();
-    //                 agent.SetDestination(destination);
-    //                 Debug.Log("Agent Is Stuck");
-    //             }
-    //             lastPosition = currentPosition;
-    //         }
-    //     }
-    // }
 
     void Die()
     {
@@ -118,8 +97,8 @@ public class Enemy : MonoBehaviour
         {   animator.SetBool("IsMoving", false);
             animator.SetTrigger("Dead");
             player.GetComponent<PlayerControl>().numKilled += 1;
-            Debug.Log(player.GetComponent<PlayerControl>().numKilled);
-            Destroy(this.gameObject, (float) 1.5);
+            // Debug.Log(player.GetComponent<PlayerControl>().numKilled);
+            Destroy(this.gameObject, (float) 1.8);
         }
     }
 

@@ -9,6 +9,11 @@ public class RoomTriggers : MonoBehaviour
     private GameObject[] doors = new GameObject[10];
     private int numChildren;
     private int alienCount = 0;
+    public bool entered = false;
+    private bool finished = false;
+
+    public AudioClip doorSound;
+    public AudioSource audioDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +46,11 @@ public class RoomTriggers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !entered)
         {
+            audioDoor.PlayOneShot(doorSound);
+            entered = true;
+
             for(int i = 0; i < doors.Length; i++)
             {
                 if(doors[i] != null)
@@ -54,8 +62,11 @@ public class RoomTriggers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.childCount == numChildren - alienCount)
+        if(transform.childCount == numChildren - alienCount && !finished)
         {
+            audioDoor.PlayOneShot(doorSound);
+            finished = true;
+            
             for(int i = 0; i < doors.Length; i++)
             {
                 if(doors[i] != null)
