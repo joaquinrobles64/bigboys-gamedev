@@ -14,4 +14,9 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Level1");
         soundSwitcher.PlayOneShot(start);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
