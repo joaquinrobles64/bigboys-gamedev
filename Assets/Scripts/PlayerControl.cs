@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -154,11 +155,21 @@ public class PlayerControl : MonoBehaviour
     void Die()
     {
         if (health <= 0 && !dead)
-        {   animator.SetBool("IsMoving", false);
+        {   
+            animator.SetBool("IsMoving", false);
             animator.SetTrigger("Dead");
             audioSwitcher.PlayOneShot(death);
             dead = true;
-            Destroy(this.gameObject, 2);
+
+            StartCoroutine(DieTimer());
         }
+    }
+
+    private IEnumerator DieTimer()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("GameOver");
+
+        Destroy(this.gameObject, 2);
     }
 }
