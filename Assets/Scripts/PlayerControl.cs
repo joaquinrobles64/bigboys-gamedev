@@ -27,6 +27,7 @@ public class PlayerControl : MonoBehaviour
     public Animator animator;
     public GameObject hitbox;
     public GameObject activator;
+    private GameObject dog;
 
     public AudioClip hitMarker;
     public AudioClip oof;
@@ -41,6 +42,7 @@ public class PlayerControl : MonoBehaviour
         cam = Camera.main.transform;
         hitbox.SetActive(false);
         activator.SetActive(true);
+        dog = GameObject.FindWithTag("Dog");
     }
 
     // Update is called once per frame
@@ -58,6 +60,10 @@ public class PlayerControl : MonoBehaviour
             return;
         }
         Movement();
+        }
+
+        if(numKilled >= 34) {
+            dog.transform.position = dog.GetComponent<Dog>().og;
         }
     }
 
