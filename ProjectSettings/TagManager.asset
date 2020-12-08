@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Collectible
+  - Door
+  - Room
+  - Level
+  - Camera
   layers:
   - Default
   - TransparentFX

@@ -7,14 +7,18 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public int damage;
+    public int damage = 0;
     public float radius;
     public Animator animator;
-    private NavMeshAgent agent;
+    public BoxCollider enemysHitbox;
+    public bool larger = false;
+
     private int count = 0;
+    private NavMeshAgent agent;
     private bool activated = false;
     private GameObject player;
-    public BoxCollider enemysHitbox;
+    private Collider[] hitPlayer;
+    private Collider[] hitPlayerConfirmation;
 
 
     private void Start()
@@ -37,12 +41,10 @@ public class Enemy : MonoBehaviour
         }
     }
     
-
     void Move() {
 
         if(!agent.hasPath) {
             animator.SetBool("IsMoving", true);
-            // SolveStuck();
             agent.SetDestination(GetPoint.Instance.getRandomPoint (transform, radius));
         }
             if(activated) {
@@ -54,7 +56,10 @@ public class Enemy : MonoBehaviour
 
     void Attack() {
 
-        Collider[] hitPlayer = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3(2, 2, 1), enemysHitbox.transform.rotation);
+        hitPlayer = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3(2, 2, 1), enemysHitbox.transform.rotation);
+
+        if(larger) 
+         hitPlayer = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3((float)2.5, 2, (float)1.5), enemysHitbox.transform.rotation);
 
         foreach (Collider playerHit in hitPlayer)
             {
@@ -71,34 +76,17 @@ public class Enemy : MonoBehaviour
     }
 
     void AttackConfirming() {
-        Collider[] hitPlayerConfirmation = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3((float)0.5, 2, (float)0.7), enemysHitbox.transform.rotation);
+
+        hitPlayerConfirmation = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3((float)1, 2, (float)1), enemysHitbox.transform.rotation);
+
+        if(larger) 
+          hitPlayerConfirmation = Physics.OverlapBox(enemysHitbox.transform.position, new Vector3((float)0.8, 2, (float)1), enemysHitbox.transform.rotation);
+
         foreach (Collider playerHitConfirmation in hitPlayerConfirmation) 
         {   
             if (playerHitConfirmation.CompareTag("Player"))
             {
-                Debug.Log("Hit");
-                player.GetComponent<PlayerControl>().TakeDamage();
-            }
-        }
-    }
-
-    IEnumerator SolveStuck() {
-        Vector3 lastPosition = this.transform.position;
-        // Debug.Log("working");
-        while (true) {
-            yield return new WaitForSeconds(3f);
- 
-            //Maybe we can also use agent.velocity.sqrMagnitude == 0f or similar
-            if (!agent.pathPending && agent.hasPath && agent.remainingDistance > agent.stoppingDistance) {
-                Vector3 currentPosition = this.transform.position;
-                if (Vector3.Distance(currentPosition, lastPosition) < 1f) {
-                    Vector3 destination = agent.destination;
-                    agent.ResetPath();
-                    agent.SetDestination(destination);
-                    Debug.Log("Agent Is Stuck");
-                }
-                Debug.Log("This thing on?");
-                lastPosition = currentPosition;
+                player.GetComponent<PlayerControl>().TakeDamage(damage);
             }
         }
     }
@@ -108,7 +96,9 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {   animator.SetBool("IsMoving", false);
             animator.SetTrigger("Dead");
-            Destroy(this.gameObject, 2);
+            player.GetComponent<PlayerControl>().numKilled += 1;
+            // Debug.Log(player.GetComponent<PlayerControl>().numKilled);
+            Destroy(this.gameObject, (float) 1.8);
         }
     }
 

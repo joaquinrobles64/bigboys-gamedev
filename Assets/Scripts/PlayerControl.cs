@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// using System.String;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
@@ -9,8 +10,15 @@ public class PlayerControl : MonoBehaviour
     public float speed;
     public float turnspeed;
     public bool canTakeDamage = true;
-    private float damageTimeout = 1f;
+    public int damage = 1;
+    public string currentPowerUp = "";
+    public int numKilled = 0;
+
+    private bool dead = false;
+    private float damageTimeout = 2f;
     private float angle;
+    public float bulletSpeed = 10;
+    public GameObject bullet;
     private Vector2 input;
     private Quaternion targetRotation;
     Transform cam;
@@ -18,6 +26,12 @@ public class PlayerControl : MonoBehaviour
     public Animator animator;
     public GameObject hitbox;
     public GameObject activator;
+
+    public AudioClip hitMarker;
+    public AudioClip oof;
+    public AudioClip death;
+    public AudioSource audioSwitcher; 
+
     
 
     // Start is called before the first frame update
@@ -33,6 +47,7 @@ public class PlayerControl : MonoBehaviour
     {
         Die();
         GetInput();
+        if(health >= 1){
         // return if there's no directional input
         float horizontalMove = Mathf.Abs(input.x);
         float verticalMove = Mathf.Abs(input.y);
@@ -42,13 +57,14 @@ public class PlayerControl : MonoBehaviour
             return;
         }
         Movement();
+        }
     }
 
     void GetInput()
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J))
         {
             Attack();
         }
@@ -92,47 +108,56 @@ public class PlayerControl : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
-        // hitbox active so it can interact with other objects
         hitbox.SetActive(true);
 
+        GameObject bulletClone = Instantiate(bullet, transform.position, transform.rotation);
+        bulletClone.transform.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+
         // detect collision with objects
-        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3(0, 1, 6), hitbox.transform.rotation);
-
-
+        Collider[] hitEnemies = Physics.OverlapBox(hitbox.transform.position, new Vector3((float)0.5, 1, 8), hitbox.transform.rotation);
 
         // damage detected enemies
         foreach (Collider enemy in hitEnemies)
         {
             if (enemy.CompareTag("Enemy"))
             {
-                enemy.GetComponent<Enemy>().health -= 1;
+                audioSwitcher.PlayOneShot(hitMarker);
+                enemy.GetComponent<Enemy>().health -= damage;
             }
         }
 
         // make hitbox inactive
         hitbox.SetActive(false);
         animator.SetTrigger("Idle");
+        Destroy(bulletClone, .5f);
     }
 
-    public void TakeDamage() {
-        health -= 1;
+    public void TakeDamage(int enemyDamage) 
+    {
+        audioSwitcher.PlayOneShot(oof);
+        health -= enemyDamage;
         StartCoroutine(damageTimer());
     }
     
-    private IEnumerator damageTimer() {
-    canTakeDamage = false;
-    // active = false;
-    yield return new WaitForSeconds(damageTimeout);
-    canTakeDamage = true;
-    // active = true;
+    private IEnumerator damageTimer() 
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageTimeout);
+        canTakeDamage = true;
     }
 
+    // private IEnumerator flashPlayer()
+    // {
+    //     GetComponent(MeshRenderer).enabled = false;
+    // }
 
     void Die()
     {
-        if (health <= 0)
+        if (health <= 0 && !dead)
         {   animator.SetBool("IsMoving", false);
             animator.SetTrigger("Dead");
+            audioSwitcher.PlayOneShot(death);
+            dead = true;
             Destroy(this.gameObject, 2);
         }
     }
