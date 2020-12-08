@@ -10,6 +10,7 @@ TagManager:
   - Room
   - Level
   - Camera
+  - Dog
   layers:
   - Default
   - TransparentFX
