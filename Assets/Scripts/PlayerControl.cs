@@ -167,7 +167,7 @@ public class PlayerControl : MonoBehaviour
 
     private IEnumerator DieTimer()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("GameOver");
 
         Destroy(this.gameObject, 2);

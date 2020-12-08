@@ -16,8 +16,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        soundSwitcher.PlayOneShot(start);
         SceneManager.LoadScene("Level1");
+        soundSwitcher.PlayOneShot(start);
     }
 
     public void QuitGame()
