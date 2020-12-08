@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Room
   - Level
+  - Camera
   layers:
   - Default
   - TransparentFX

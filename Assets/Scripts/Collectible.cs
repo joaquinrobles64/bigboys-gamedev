@@ -30,10 +30,10 @@ public class Collectible : MonoBehaviour
             {
                 case 1:
                   player.GetComponent<PlayerControl>().currentPowerUp = "Heart";
-                  if(player.GetComponent<PlayerControl>().health < 5)
-                     player.GetComponent<PlayerControl>().health = 5;
+                  if(player.GetComponent<PlayerControl>().health <= 5)
+                     player.GetComponent<PlayerControl>().health += 3;
                   else
-                     player.GetComponent<PlayerControl>().health += 2;
+                     player.GetComponent<PlayerControl>().health = 8;
                      Destroy(this.gameObject, 3);
                 break;
 
@@ -64,6 +64,6 @@ public class Collectible : MonoBehaviour
     {
         player.GetComponent<PlayerControl>().damage = 5;
         yield return new WaitForSeconds(powerUpTime);
-        player.GetComponent<PlayerControl>().damage = player.GetComponent<PlayerControl>().damage;
+        player.GetComponent<PlayerControl>().damage = 1;
     }
 }
